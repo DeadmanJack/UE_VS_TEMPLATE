@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build EvilForces",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
+            "args": [
+                "\"C:\\UE5\\UnrealEngine\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll\"",
+                "EvilForcesEditor",
+                "Win64",
+                "Development",
+                "-Project=\"${workspaceFolder}\\EvilForces.uproject\"",
+                "-WaitMutex"
+            ],
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Rebuild EvilForces",
+            "group": "build",
+            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
+            "args": [
+                "\"C:\\UE5\\UnrealEngine\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll\"",
+                "EvilForcesEditor",
+                "Win64",
+                "Development",
+                "-Project=\"${workspaceFolder}\\EvilForces.uproject\"",
+                "-Clean",
+                "-WaitMutex"
+            ],
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Generate Project Files",
+            "group": "build",
+            "command": "C:\\Program Files\\dotnet\\dotnet.exe",
+            "args": [
+                "\"C:\\UE5\\UnrealEngine\\Engine\\Binaries\\DotNET\\UnrealBuildTool\\UnrealBuildTool.dll\"",
+                "-ProjectFiles",
+                "-Project=\"${workspaceFolder}\\EvilForces.uproject\"",
+                "-Game",
+                "-Rocket",
+                "-Progress"
+            ],
+            "type": "shell",
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}

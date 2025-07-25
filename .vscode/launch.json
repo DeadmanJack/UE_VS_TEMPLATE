@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch EvilForcesEditor (Development)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\UE5\\UnrealEngine\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+            "args": [
+                "\"${workspaceFolder}\\EvilForces.uproject\""
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "Launch EvilForces (Development)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}\\Binaries\\Win64\\EvilForces-Win64-DebugGame.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        }
+    ]
+}
