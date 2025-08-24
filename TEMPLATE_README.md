@@ -18,20 +18,24 @@ This template provides a complete VS Code configuration for Unreal Engine 5 deve
 
 ## Usage
 
-1. **For New Projects**: Copy this template to your new UE5 project directory, **excluding the `.git` folder** (which contains this template's repository history):
+1. **For New Projects**: Use one of these methods to create a new project from this template:
+
+   **Option A: GitHub Template (Recommended)**
+   - Click the "Use this template" button on this repository
+   - Name your new project and create the repository
+   - Clone your new repository: `git clone <your-new-repo-url>`
+   
+   **Option B: Clone + Setup**
    ```bash
-   # Option 1: Clone without git history
    git clone --depth 1 <template-repo-url> <your-project-name>
    cd <your-project-name>
    rm -rf .git
    git init
-   
-   # Option 2: Download and extract template files manually
-   # Copy all files except .git/ directory
-   
-   # Option 3: Use GitHub's "Use this template" button
-   # This automatically creates a new repo without the template's git history
    ```
+   
+   **Option C: Manual Download**
+   - Download template files (excluding .git directory)
+   - Extract to your project folder
 
 2. **Update Project Name**: Edit the following files to replace "EvilForces" with your project name:
    - `.vscode/tasks.json` - Update all task labels and project references
@@ -43,9 +47,9 @@ This template provides a complete VS Code configuration for Unreal Engine 5 deve
 
 3. **Generate Project Files**: Run the "Generate Project Files" task in VS Code to create the missing `compileCommands_*.json` files
 
-## Quick Setup (Optional)
+## Quick Setup (Recommended)
 
-Use the included Python script to automatically update project names:
+After creating your project from the template, run the setup script to automatically update project names:
 ```bash
 python setup_new_project.py YourProjectName
 ```
